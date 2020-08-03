@@ -4,9 +4,8 @@
 //  router='true'
 <template>
   <el-menu
-      default-active="2"
+      default-active="1"
       class="el-menu-vertical-demo"
-     
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b"
@@ -55,8 +54,8 @@
           <el-menu-item index="5-1">订单列表</el-menu-item>        
         </el-menu-item-group>
       </el-submenu>
-    </el-menu>  
-  </el-col>
+  </el-menu>  
+  
 </template>
 
 <script>

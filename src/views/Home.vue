@@ -1,22 +1,21 @@
 <template>
   <div class="home" id="app">
-    <!-- 左边导航栏 -->
-    <!-- <div class="HomeLeft">
-      <BackBar></BackBar>
-    </div> -->
-   <!--右边内容栏 
-    <div class="HomeRight">
-      <BackHeader></BackHeader>
-    </div> -->
+    <!-- left -->
     <el-container>
+      <!-- 导航 -->
       <el-aside width="180px">
         <BackBar></BackBar>
       </el-aside>
+     <!-- right -->
       <el-container>
+        <!-- 页头 -->
           <el-header height='47px' padding=0>
             <BackHeader></BackHeader>
           </el-header>
-          <el-main>Main</el-main>
+          <!-- 内容 -->
+          <el-main  padding=0>
+            <orderList></orderList>
+          </el-main>
       </el-container>
     </el-container>
   </div>
@@ -26,13 +25,16 @@
 //引入头部
  import BackHeader from "../components/BackHeader.vue";
 //引入导航栏  bar
-import BackBar from '../components/BackBar.vue'
+ import BackBar from '../components/BackBar.vue'
+ //引入订单列表 组件
+ import orderList from '../components/OrderList/orderList'
 
 export default {
   name: "Home",
   components: {
     BackHeader,
-    BackBar
+    BackBar,
+    orderList
   },
 };
 </script>
@@ -41,23 +43,6 @@ html,body,#app{
   width: 100%;
   height: 100%;
 }
-// .HomeLeft {
-//   width: 180px;
-//   height: 100%;
-//   background: pink;
-//   position: fixed;
-//   left: 0;
-//   top: 0;
-//   overflow: hidden;
-// }
-// .HomeRight {
-//   height: 100%;
-//   background: blueviolet;
-//   margin-left: 180px;
-// }
-  element.style{
-    height: 46px !important;
-  }
   .el-header{
     background-color:#fff;
     color: #333;
@@ -70,7 +55,7 @@ html,body,#app{
     color: #333;
     text-align: center;
     line-height: 200px;
-    height: 100%;
+    height: 100%;  
   }
  .el-main {
     background-color: #E9EEF3;
